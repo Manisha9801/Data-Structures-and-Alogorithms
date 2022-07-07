@@ -7,7 +7,7 @@
 //     }
 
 //     this.deQueue = function(){
-//         this.collection.shift()
+//         this.collection.length ? this.collection.shift() : null;
 //     }
 
 //     this.front = function(){
@@ -35,8 +35,6 @@
 // console.log(queue.front())
 // console.log(queue.rear())
 
-
-
 //Implementing using a class
 class Queue {
   constructor() {
@@ -48,7 +46,7 @@ class Queue {
   }
 
   deQueue() {
-    this.collection.shift();
+    this.collection.length ? this.collection.shift() : null;
   }
 
   front() {
@@ -64,14 +62,14 @@ class Queue {
   }
 }
 
-let queue = new Queue()
-queue.enqueue(10)
-queue.enqueue(20)
-queue.enqueue(30)
-queue.enqueue(40)
-console.log(queue.print())
-queue.deQueue()
-queue.deQueue()
-console.log(queue.print())
-console.log(queue.front())
-console.log(queue.rear())
+let queue = new Queue();
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+queue.enqueue(40);
+console.log(queue.print());
+queue.deQueue();
+queue.deQueue();
+console.log(queue.print());
+console.log(queue.front());
+console.log(queue.rear());
